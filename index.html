@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --primary: #4a6fa5;
+        --primary-dark: #3a5683;
+        --primary-light: #c5d5e5;
+        --secondary: #8fb8de;
+        --accent: #63c0f5;
+        --text-light: #ffffff;
+        --text-dark: #334155;
+        --card-bg: #f0f7ff;
+        --body-bg: #f8fafc;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --radius-sm: 6px;
+        --radius-md: 12px;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--primary-light) 0%,
+          var(--secondary) 100%
+        );
+        min-height: 100vh;
+        color: var(--text-dark);
+      }
+
+      .todo-container {
+        background-color: var(--card-bg);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+      }
+
+      .todo-item {
+        transition: all 0.3s ease;
+        border-radius: var(--radius-sm);
+      }
+
+      .todo-item:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+        background-color: white;
+        border-color: rgba(99, 192, 245, 0.2);
+      }
+
+      .header {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: var(--text-light);
+        padding: 1rem 1.5rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: var(--text-light);
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
+
+      /* Custom select styling */
+      select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234a6fa5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 1rem;
+        padding-right: 2.5rem;
+      }
+
+      select:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(99, 192, 245, 0.25);
+      }
+
+      /* Style for dropdown options */
+      select option {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        color: var(--text-dark);
+        background-color: white;
+      }
+
+      select option:hover,
+      select option:focus {
+        background-color: var(--primary-light);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

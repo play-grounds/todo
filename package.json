@@ -1,0 +1,54 @@
+{
+  "name": "noadav_todo",
+  "version": "0.0.1",
+  "description": "A decentralized todo application built on the Nostr protocol with advanced cloud storage capabilities via nosdav, Solid-style TypeRegistrations, and calendar export.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "nostr",
+    "todo",
+    "decentralized",
+    "nosdav",
+    "webdav",
+    "solid",
+    "type-registrations",
+    "calendar",
+    "preact",
+    "did",
+    "storage"
+  ],
+  "author": "play-grounds",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/play-grounds/todo.git"
+  },
+  "homepage": "https://play-grounds.github.io/todo",
+  "bugs": {
+    "url": "https://github.com/play-grounds/todo/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "index.html",
+    "index.js",
+    "navbar.js",
+    "storage-config.js",
+    "nosdav-shim.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
